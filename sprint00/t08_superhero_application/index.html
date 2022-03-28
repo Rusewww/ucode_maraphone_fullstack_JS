@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Superhero Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>Superhero Form</h1>
+<form>
+    <fieldset>
+        <legend>About the Superhero</legend>
+        <p>
+            <span>Real Name</span>
+            <label>
+                <input type="text" placeholder="Superhero real name" autofocus>
+            </label>
+            <span>Superhero Name</span>
+            <label>
+                <input type="text" placeholder="Superhero alias">
+            </label>
+            <span>Age</span>
+            <input type="number" max="999" min="1" step="1">
+            <br><br>
+            <span>About</span>
+            <label for="about"></label><textarea name="about" id="about" cols="70" rows="5" maxlength="500"
+                                                 placeholder="Information about the superhero, max 500 symbols"></textarea>
+        </p>
+        <p><span>Photo: </span><input type="file" name="Photo"></p>
+
+    </fieldset>
+    <fieldset>
+        <legend>Powers</legend>
+        <p>
+        <div id="powers">
+            <input type="checkbox" id="Telekinesia">
+            <label for="Telekinesia">Telekinesia</label>
+            <input type="checkbox" id="Strength">
+            <label for="Strength">Super strength or speed</label>
+            <input type="checkbox" id="Shapeshifting">
+            <label for="Shapeshifting">Shapeshifting</label>
+            <input type="checkbox" id="Flight">
+            <label for="Flight">Flight</label>
+            <input type="checkbox" id="Econtrol">
+            <label for="Econtrol">Elemental control</label>
+            <input type="checkbox" id="Other">
+            <label for="Other">Other</label>
+        </div>
+        <br>
+        <span>Level of control:</span>
+        <label>
+            <input type="range">
+        </label>
+    </fieldset>
+    <fieldset>
+        <legend>Origin of Powers</legend>
+        <p>
+        <div>
+            <input type="radio" id="Unknown">
+            <label for="Unknown">Unknown</label>
+            <input type="radio" id="accident">
+            <label for="accident">Freak lab accident</label>
+            <input type="radio" id="ancient_wise">
+            <label for="ancient_wise">Chosen by an ancient wise being</label>
+            <input type="radio" id="not_human">
+            <label for="not_human">The superhero is not human</label>
+            <input type="radio" id="O">
+            <label for="O">Other</label>
+        </div>
+    </fieldset>
+    <br>
+    <input type="reset" value="Clear">
+    <input type="submit" value="Send">
+</form>
+</body>
+</html>

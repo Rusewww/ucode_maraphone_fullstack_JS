@@ -1,0 +1,19 @@
+.gimg {
+    height: 200px;
+}
+
+.row {
+    display: flex;
+}
+
+.human {
+    width: 80px;
+}
+
+.gauntlet:hover ~.rowOne > img:nth-child(odd){
+    opacity: 0;
+}
+
+.gauntlet:hover ~.row > img:nth-child(even){
+    opacity: 0;
+}

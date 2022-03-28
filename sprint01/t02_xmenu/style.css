@@ -1,0 +1,80 @@
+h1{
+    text-align: center;
+    width: 100%;
+    color: #fff;
+    background: #d4c642;
+}
+
+span{
+    display: inline-block;
+    font-family: Arial, serif;
+    font-size: 1em;
+    vertical-align: bottom;
+    height: 35px;
+}
+
+div{
+    display: flex;
+    margin-left: 400px;
+}
+
+body {
+    font-family: sans-serif;
+}
+
+.drop {
+    margin: 1px;
+    padding: 2px 50px;
+    list-style: none;
+    width: 100px;
+    background-color: #d7c60a;
+}
+
+.drop li {
+    position: relative;
+}
+
+.drop li a {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+}
+
+.drop li ul {
+    position: absolute;
+    top: 100%;
+    left: -50px;
+    list-style: none;
+    display: none;
+    line-height: normal;
+    background-color: #333;
+}
+
+.drop li ul li a {
+    text-align: left;
+    color: #cccccc;
+    font-size: 14px;
+    padding: 2px 45px;
+    display: block;
+}
+
+.drop li ul li a:hover {
+    background-color: #d7c60a;
+    color: #ffffff;
+}
+
+.drop li ul li ul {
+    left: 100%;
+    top: 0;
+}
+
+ul li:hover>a {
+    background-color: #d7c60a;
+    color: #ffffff !important;
+}
+
+
+ul li:hover>ul {
+    display: block;
+}

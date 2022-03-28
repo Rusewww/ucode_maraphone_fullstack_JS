@@ -1,0 +1,16 @@
+.japan {
+    border: 2px solid gray;
+    width: 300px;
+    height: 200px;
+}
+
+.japan::after{
+    content: "";
+    width: 100px;
+    height: 100px;
+    background: #9f3032;
+    display: block;
+    border-radius: 50px;
+    margin-left: 100px;
+    margin-top: 50px;
+}

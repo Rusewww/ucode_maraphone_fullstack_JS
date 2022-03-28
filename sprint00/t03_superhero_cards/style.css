@@ -1,0 +1,59 @@
+.card{
+    width: 270px;
+    height: 140px;
+    border-radius: 5px;
+    margin-top: 40px;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 10px;
+    font-family: Verdana, serif;
+}
+
+img {
+    height: 182px;
+    position: absolute;
+}
+
+#CapCard{
+    background: linear-gradient(to bottom, #4568DC, #B06AB3);
+}
+
+#IronCard{
+    background: linear-gradient(to bottom, #e52d27, #b31217);
+}
+
+#BlackCard{
+    background: linear-gradient(45deg, #000, #61045F);
+}
+#SpiderCard{
+    background: linear-gradient(to bottom, #e52d27, #000);
+}
+
+#CapImg, #IronImg, #BlackImg{
+    margin-top: -32px;
+}
+
+#SpiderImg{
+    margin-top: -9px;
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    float: left;
+}
+
+.HeroName, .RealName{
+    text-align: right;
+    font-weight: bold;
+    margin: 0;
+}
+
+.HeroName  {
+    color: white;
+    font-size: 14px;
+}
+.RealName {
+    color: rgba(255,255,255,0.5);
+    font-size: 9px;
+}

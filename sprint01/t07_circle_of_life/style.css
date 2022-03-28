@@ -1,0 +1,22 @@
+@keyframes box {
+    from { left: 0; }
+    to { left: 300px; }
+}
+
+.circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: green;
+    display: block;
+    animation: shake 2s ease-out alternate infinite;
+    transition: 2s cubic-bezier(0,0,0,0);
+}
+.circle:hover {
+    background-color: red;
+}
+@keyframes shake {
+    100% {
+        transform: translateX(calc(100vw - 150px));
+    }
+}

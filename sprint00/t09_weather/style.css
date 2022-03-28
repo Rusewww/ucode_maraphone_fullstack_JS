@@ -1,0 +1,25 @@
+.list{
+    display: flex;
+}
+
+.weather{
+    text-align: center;
+    margin-right: 5px;
+}
+
+.date{
+    color: white;
+    font-family: Lato Regular, serif;
+    font-size: 1.5em;
+    background: #5693b2;
+}
+
+.temperature{
+    color: black;
+    font-family: Lato Bold, serif;
+    font-size: 2em;
+}
+
+.weather:hover{
+    box-shadow: 0 0 5px;
+}

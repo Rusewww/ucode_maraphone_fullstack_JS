@@ -1,0 +1,48 @@
+th, td{
+    border: 1px solid #000;
+    text-align: center;
+}
+
+td {
+    padding: 10px;
+    vertical-align: center;
+}
+
+th{
+    background-color: #000;
+    color: white;
+    height: 15px;
+    vertical-align: center;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+tr.header_one{
+    background: orange;
+}
+
+tr:nth-child(1){
+    background-color: #c9a45f;
+}
+tr:nth-child(2){
+    background-color: green;
+}
+tr:nth-child(3){
+    background-color: #6262ea;
+}
+tr:nth-child(4){
+    background-color: yellow;
+}
+tr:nth-child(5){
+    background-color: #cb3939;
+}
+tr:nth-child(6){
+    background-color: #864e86;
+}
+
+.stones{
+    border-radius: 16px;
+}
