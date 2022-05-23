@@ -1,0 +1,23 @@
+{
+  "name": "profi_auth_nodejs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node_modules/.bin/nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.4",
+    "nodemon": "^2.0.6",
+    "express-thymeleaf": "^0.3.0",
+    "thymeleaf": "^0.18.0",
+    "body-parser": "^1.20.0"
+  }
+}
