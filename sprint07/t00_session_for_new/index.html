@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Avenger application</title>
+    <style>
+        form {
+            border: 2px gray solid;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+<h1>New Avenger application</h1>
+<div id="result"></div>
+<form action="http://localhost:3000/save" method="POST">
+    <legend>About candidate</legend>
+    <p>
+        <span>Name</span>
+        <input type="text" name="name" id="name" placeholder="Tell your name"
+               autofocus>
+        <span>E-mail</span>
+        <input type="text" name="email" id="E-mail"
+               placeholder="Tell your e-mail">
+        <span>Age</span>
+        <input type="number" name="age" id="age" max="500" min="1" step="1">
+        <br><br>
+        <span>About</span>
+        <label for="about"></label><textarea name="about" id="about"
+                                             cols="70" rows="5"
+                                             maxlength="500"
+                                             placeholder="Tell about yourself, max 500 symbols"></textarea>
+    </p>
+    <p><span>Photo: </span><input id="photo" type="file" name="photo"></p>
+    <br>
+    <button type="reset" onclick="clear()">Clear</button>
+    <button type="submit" class="btn btn-primary">Send</button>
+</form>
+</body>
+</html>
