@@ -50,3 +50,4 @@ app.get('/delete', async (req, res) => {
     ss.url = ''
     ss.content = ''
     return res.redirect('/');
+})
