@@ -1,39 +1,29 @@
 const express = require('express')
-let bodyParser = require('body-parser')
-const session = require('express-session')
+const expressThymeleaf = require('express-thymeleaf')
+const {TemplateEngine} = require('thymeleaf')
+const bodyParser = require('body-parser')
+const CSVParser = require('./parser')
+const PORT = process.env.PORT ?? 3000
 
-let sess
-let app = express()
-app.use(
-    session({
-        secret: 'session secret',
-        saveUninitialized: true
+const app = express()
+const templateEngine = new TemplateEngine()
+app.engine('html', expressThymeleaf(templateEngine))
+app.set('view engine', 'html')
+app.set('views', __dirname + '/')
+app.use(bodyParser.urlencoded({extended: false}))
+
+app.listen(PORT, () => {
+    console.log(`Server has been started on port ${PORT}...`)
+})
+
+app.get('/', async function(req, res) {
+    res.render('index')
+})
+
+app.post('/', async function(req, res) {
+    const data = await CSVParser.parseCSV(req.body.csv)
+    const table = CSVParser.transform(data)
+    res.render('index', {
+        table: JSON.stringify(table)
     })
-)
-
-let urlencodedParser = bodyParser.urlencoded({extended: false})
-
-app.get('/', function (req, res) {
-    res.sendFile(__dirname + '/index.html')
 })
-
-app.post('/save', urlencodedParser, function (req, res) {
-    let response = {
-        name: req.body.name,
-        email: req.body.email,
-        age: req.body.age,
-        about: req.body.about,
-        photo: req.body.photo
-    };
-    sess = req.session
-
-    sess.copy = response
-
-    console.log(sess.copy);
-    res.end(JSON.stringify(sess.copy));
-})
-
-app.listen(3000, () => {
-    console.log(`Server has been started`);
-})
-

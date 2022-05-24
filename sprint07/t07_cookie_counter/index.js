@@ -1,8 +1,8 @@
-onst express = require('express')
+const express = require('express')
 const cookieSession = require('cookie-session')
 const expressThymeleaf = require('express-thymeleaf')
 const {TemplateEngine} = require('thymeleaf')
-const PORT = process.env.PORT ?? 8080
+const PORT = process.env.PORT ?? 3000
 
 const app = express()
 const templateEngine = new TemplateEngine()
