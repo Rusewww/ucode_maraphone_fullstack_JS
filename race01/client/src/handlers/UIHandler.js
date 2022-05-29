@@ -5,6 +5,8 @@ export default class UIHandler{
 
         this.zoneHandler = new ZoneHandler(scene);
 
+
+        //DropZone - Change coordinates and size;
         this.buildZone = () => {
             scene.dropZone = this.zoneHandler.renderZone(470,500);
             this.zoneHandler.renderOutline(scene.dropZone);
@@ -24,6 +26,7 @@ export default class UIHandler{
             scene.opponentDeckArea.setStrokeStyle(3, 0x66CCCC);
 
         }
+
         //DealCardButton - change coordinates, makes better
         this.buildGameText = () => {
             scene.dealCards = scene.add.text(960, 445, "Deal Cards");
