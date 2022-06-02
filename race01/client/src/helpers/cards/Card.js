@@ -1,10 +1,8 @@
-//Card class: add health, and attack
-
-export default class Card{
+export default class Card {
     constructor(scene) {
-        let sprite;
         this.render = (x, y, type) => {
-            if (type === 'playerCard'){
+            let sprite;
+            if (type === 'playerCard') {
                 sprite = this.playerCardSprite;
             } else {
                 sprite = this.opponentCardSprite;

@@ -1,13 +1,12 @@
-import Phaser from 'phaser';
-import Game from "./scenes/game";
-import {auto} from "html-webpack-plugin/lib/chunksorter";
+import Phaser from "phaser";
+import Game from "./scenes/game.js";
 
-const config = {
+let config = {
     type: Phaser.AUTO,
-    scale:{
+    scale: {
         mode: Phaser.Scale.FIT,
         width: 1200,
-        height: 1000,
+        height: 1000
     },
     scene: [
         Game
