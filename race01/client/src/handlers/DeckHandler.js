@@ -1,6 +1,6 @@
-import CardBack from './cards/CardBack';
-import Boolean from './cards/Boolean';
-import Ping from './cards/Ping';
+import CardBack from '../cards/CardBack';
+import Boolean from '../cards/Boolean';
+import Ping from '../cards/Ping';
 
 export default class DeckHandler {
     constructor(scene) {

@@ -1,9 +1,9 @@
-import CardHandler from '../helpers/CardHandler';
-import DeckHandler from '../helpers/DeckHandler';
-import GameHandler from '../helpers/GameHandler';
-import InteractiveHandler from '../helpers/InteractiveHandler';
-import SocketHandler from '../helpers/SocketHandler';
-import UIHandler from '../helpers/UIHandler';
+import CardHandler from '../handlers/CardHandler';
+import DeckHandler from '../handlers/DeckHandler';
+import GameHandler from '../handlers/GameHandler';
+import InteractiveHandler from '../handlers/InteractiveHandler';
+import SocketHandler from '../handlers/SocketHandler';
+import UIHandler from '../handlers/UIHandler';
 
 export default class Game extends Phaser.Scene {
     constructor() {
