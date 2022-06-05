@@ -7,9 +7,7 @@ import UIHandler from '../handlers/UIHandler';
 
 export default class Game extends Phaser.Scene {
     constructor() {
-        super({
-            key: 'Game'
-        });
+        super("Game");
     }
 
     preload() {
