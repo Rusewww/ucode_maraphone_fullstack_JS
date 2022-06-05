@@ -1,0 +1,8 @@
+body{
+    display: grid;
+    justify-items: center;
+}
+
+#game {
+    align-self: center;
+}
