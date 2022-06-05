@@ -7,29 +7,29 @@ export default class UIHandler {
 
         this.buildZones = () => {
 
-            scene.dropZone = this.zoneHandler.renderZonePlayer(400, 500);
+            scene.dropZone = this.zoneHandler.renderZonePlayer(960, 400);
             this.zoneHandler.renderOutlinePlayer(scene.dropZone);
 
-            scene.dropZone = this.zoneHandler.renderZoneEnemy(800, 500);
+            scene.dropZone = this.zoneHandler.renderZoneEnemy(960, 680);
             this.zoneHandler.renderOutlineEnemy(scene.dropZone);
         }
 
         this.buildPlayerAreas = () => {
 
-            scene.playerHandArea = scene.add.rectangle(470, 860, 850, 230);
+            scene.playerHandArea = scene.add.rectangle(960, 950, 1000, 230);
             scene.playerHandArea.setStrokeStyle(4, 0xff69b4);
-            scene.playerDeckArea = scene.add.rectangle(1700, 860, 155, 215);
+            scene.playerDeckArea = scene.add.rectangle(1700, 950, 155, 215);
             scene.playerDeckArea.setStrokeStyle(4, 0x00ffff);
             
-            scene.opponentHandArea = scene.add.rectangle(470, 135, 850, 230);
+            scene.opponentHandArea = scene.add.rectangle(960, 130, 1000, 230);
             scene.opponentHandArea.setStrokeStyle(4, 0xff69b4);
-            scene.opponentDeckArea = scene.add.rectangle(1700, 135, 155, 215);
+            scene.opponentDeckArea = scene.add.rectangle(1700, 130, 155, 215);
             scene.opponentDeckArea.setStrokeStyle(4, 0x00ffff);
             
         }
 
         this.buildGameText = () => {
-            scene.dealCards = scene.add.text(960, 445, "Deal Cards").setFontSize(14).setFontFamily('Trebuchet MS');
+            scene.dealCards = scene.add.text(100, 445, "Deal Cards").setFontSize(14).setFontFamily('Trebuchet MS');
         }
 
         this.buildUI = () => {

@@ -9,4 +9,6 @@ export default class Boolean extends Card {
         this.playerCardSprite = "cyanBoolean";
         this.opponentCardSprite = "magentaBoolean";
     }
+
+
 }
