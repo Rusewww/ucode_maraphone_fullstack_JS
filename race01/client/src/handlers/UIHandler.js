@@ -7,8 +7,11 @@ export default class UIHandler {
 
         this.buildZones = () => {
 
-            scene.dropZone = this.zoneHandler.renderZone(470, 500);
-            this.zoneHandler.renderOutline(scene.dropZone);
+            scene.dropZone = this.zoneHandler.renderZonePlayer(400, 500);
+            this.zoneHandler.renderOutlinePlayer(scene.dropZone);
+
+            scene.dropZone = this.zoneHandler.renderZoneEnemy(800, 500);
+            this.zoneHandler.renderOutlineEnemy(scene.dropZone);
         }
 
         this.buildPlayerAreas = () => {
@@ -16,12 +19,12 @@ export default class UIHandler {
             scene.playerHandArea = scene.add.rectangle(470, 860, 850, 230);
             scene.playerHandArea.setStrokeStyle(4, 0xff69b4);
             scene.playerDeckArea = scene.add.rectangle(1000, 860, 155, 215);
-            scene.playerDeckArea.setStrokeStyle(3, 0x00ffff);
+            scene.playerDeckArea.setStrokeStyle(4, 0x00ffff);
             
             scene.opponentHandArea = scene.add.rectangle(470, 135, 850, 230);
             scene.opponentHandArea.setStrokeStyle(4, 0xff69b4);
             scene.opponentDeckArea = scene.add.rectangle(1000, 135, 155, 215);
-            scene.opponentDeckArea.setStrokeStyle(3, 0x00ffff);
+            scene.opponentDeckArea.setStrokeStyle(4, 0x00ffff);
             
         }
 

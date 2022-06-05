@@ -1,17 +1,31 @@
 export default class ZoneHandler {
     constructor(scene) {
-        this.renderZone = (x, y) => {
-            let dropZone = scene.add.zone(x, y, 850, 230).setRectangleDropZone(850, 230);
-            dropZone.setData({
+        this.renderZonePlayer = (x, y) => {
+            let dropZonePlayer = scene.add.zone(x, y, 200, 200).setRectangleDropZone(200, 300);
+            dropZonePlayer.setData({
                 "cards": 0
             });
-            return dropZone;
+            return dropZonePlayer;
         }
-        this.renderOutline = (dropZone) => {
+        this.renderOutlinePlayer = (dropZonePlayer) => {
             let dropZoneOutline = scene.add.graphics();
-            dropZoneOutline.lineStyle(4, 0xff69b4);
-            dropZoneOutline.strokeRect(dropZone.x - dropZone.input.hitArea.width / 2, dropZone.y - dropZone.input.hitArea.height / 2, dropZone.input.hitArea.width, dropZone.input.hitArea.height);
-            dropZone.setData("outline", dropZoneOutline);
+            dropZoneOutline.lineStyle(4, 0x00FF00);
+            dropZoneOutline.strokeRect(dropZonePlayer.x - dropZonePlayer.input.hitArea.width / 2, dropZonePlayer.y - dropZonePlayer.input.hitArea.height / 2, dropZonePlayer.input.hitArea.width, dropZonePlayer.input.hitArea.height);
+            dropZonePlayer.setData("outline", dropZoneOutline);
+        }
+
+        this.renderZoneEnemy = (x, y) => {
+            let dropZoneEnemy = scene.add.zone(x, y, 200, 200).setRectangleDropZone(200, 300);
+            dropZoneEnemy.setData({
+                "cards": 0
+            });
+            return dropZoneEnemy;
+        }
+        this.renderOutlineEnemy = (dropZoneEnemy) => {
+            let dropZoneOutline = scene.add.graphics();
+            dropZoneOutline.lineStyle(4, 0xFF0000);
+            dropZoneOutline.strokeRect(dropZoneEnemy.x - dropZoneEnemy.input.hitArea.width / 2, dropZoneEnemy.y - dropZoneEnemy.input.hitArea.height / 2, dropZoneEnemy.input.hitArea.width, dropZoneEnemy.input.hitArea.height);
+            dropZoneEnemy.setData("outline", dropZoneOutline);
         }
     }
 }

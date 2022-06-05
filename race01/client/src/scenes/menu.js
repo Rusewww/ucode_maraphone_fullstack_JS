@@ -28,8 +28,9 @@ export default class Menu extends Phaser.Scene {
 
         this.btnPlay.on("pointerup", function() {
             this.btnPlay.setTexture("sprBtnPlay");
-            this.scene.start("Game");
+            //this.scene.start("Game");
         }, this);
+        this.scene.start("Game");
     }
 
     update() {

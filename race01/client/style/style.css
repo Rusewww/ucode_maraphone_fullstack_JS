@@ -3,6 +3,10 @@ body{
     justify-items: center;
 }
 
+::-webkit-scrollbar {
+    width: 0;
+}
+
 #game {
     align-self: center;
 }
