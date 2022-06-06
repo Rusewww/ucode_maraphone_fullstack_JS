@@ -6,6 +6,8 @@ export default class GameHandler {
         this.opponentDeck = [];
         this.playerHand = [];
         this.opponentHand = [];
+        this.playerZone = [];
+        this.opponentZone = [];
         
         this.changeTurn = () => {
             this.isMyTurn = !this.isMyTurn;

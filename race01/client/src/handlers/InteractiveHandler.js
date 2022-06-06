@@ -49,11 +49,11 @@ export default class InteractiveHandler {
             }
         })
 
-        scene.input.on('drop', (pointer, gameObject, dropZone) => {
+        scene.input.on('drop', (pointer, gameObject, dropZonePlayer) => {
             if (scene.GameHandler.isMyTurn && scene.GameHandler.gameState === "Ready") {
-                gameObject.x = (dropZone.x) + (dropZone.data.values.cards);
-                gameObject.y = dropZone.y;
-                scene.dropZone.data.values.cards++;
+                gameObject.x = (dropZonePlayer.x + 150) + (dropZonePlayer.data.values.cards);
+                gameObject.y = dropZonePlayer.y;
+                scene.dropZonePlayer.data.values.cards++;
                 scene.input.setDraggable(gameObject, false);
                 scene.socket.emit('cardPlayed', gameObject.data.values.name, scene.socket.id);
             }

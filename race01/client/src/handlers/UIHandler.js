@@ -7,11 +7,11 @@ export default class UIHandler {
 
         this.buildZones = () => {
 
-            scene.dropZone = this.zoneHandler.renderZonePlayer(960, 400);
-            this.zoneHandler.renderOutlinePlayer(scene.dropZone);
+            scene.dropZonePlayer = this.zoneHandler.renderZonePlayer(960, 400);
+            this.zoneHandler.renderOutlinePlayer(scene.dropZonePlayer);
 
-            scene.dropZone = this.zoneHandler.renderZoneEnemy(960, 680);
-            this.zoneHandler.renderOutlineEnemy(scene.dropZone);
+            scene.dropZoneEnemy = this.zoneHandler.renderZoneEnemy(960, 680);
+            this.zoneHandler.renderOutlineEnemy(scene.dropZoneEnemy);
         }
 
         this.buildPlayerAreas = () => {
