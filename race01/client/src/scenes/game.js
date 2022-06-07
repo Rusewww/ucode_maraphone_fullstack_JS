@@ -20,12 +20,12 @@ export default class Game extends Phaser.Scene {
         this.load.image('magentaBoolean', 'src/assets/Magenta_Boolean3x.png');
         this.load.image('cyanPing', 'src/assets/Cyan_Ping3x.png');
         this.load.image('magentaPing', 'src/assets/Magenta_Ping3x.png');
-        this.load.image('background','src/assets/background.png');
+        this.load.image('background','src/assets/back_menu.jpg');
         
     }
 
     create() {
-        //this.backgroundHandler = new backgroundHandler(this);
+        this.backgroundHandler = new backgroundHandler(this);
         this.CardHandler = new CardHandler();
         this.DeckHandler = new DeckHandler(this);
         this.GameHandler = new GameHandler(this);

@@ -1,3 +1,4 @@
+import backgroundHandler from '../handlers/backgroundHandler';
 
 export default class Menu extends Phaser.Scene {
     constructor() {
@@ -7,9 +8,12 @@ export default class Menu extends Phaser.Scene {
     preload(){
         this.load.image('sprBtnPlay', 'src/assets/CyanCardBack.png');
         this.load.image('sprBtnPlayHover', 'src/assets/MagentaCardBack.png');
+        this.load.image('background','src/assets/menu_back.jpg');
+
     }
 
     create() {
+        this.backgroundHandler = new backgroundHandler(this);
         this.btnPlay = this.add.sprite(
             this.game.config.width * 0.3,
             this.game.config.height * 0.3,
@@ -28,9 +32,9 @@ export default class Menu extends Phaser.Scene {
 
         this.btnPlay.on("pointerup", function() {
             this.btnPlay.setTexture("sprBtnPlay");
-            //this.scene.start("Game");
+            this.scene.start("Game");
         }, this);
-        this.scene.start("Game");
+        //this.scene.start("Game");
     }
 
     update() {
