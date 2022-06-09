@@ -234,7 +234,7 @@ nav {
     background-color: #1b1d29;
 }
 
-/* убираем отступы и поля, а также list-style для "ul",
+/* убираем отступы и поля, а также list-views для "ul",
  * и добавляем "position:relative" */
 nav ul {
     padding:0;

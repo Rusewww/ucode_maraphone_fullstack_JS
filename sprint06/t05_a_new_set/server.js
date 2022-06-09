@@ -11,9 +11,9 @@ http.createServer((req, res) => {
             res.writeHead(200, {"Content-Type": 'text/javascript'})
             fs.createReadStream('script.js').pipe(res)
             break;
-        case '/style.css':
+        case '/views.css':
             res.writeHead(200, {"Content-Type": 'text/css'})
-            fs.createReadStream('style.css').pipe(res)
+            fs.createReadStream('views.css').pipe(res)
             break;
         default:
             res.writeHead(404, {"Content-Type": 'text/plane'})

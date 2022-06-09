@@ -320,7 +320,7 @@ var VanillaTilt = (function () {
 
         /**
          * Appends the glare element (if glarePrerender equals false)
-         * and sets the default style
+         * and sets the default views
          */
         prepareGlare() {
             // If option pre-render is enabled we assume all html/css is present for an optimal glare effect.
