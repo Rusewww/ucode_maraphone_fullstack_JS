@@ -44,7 +44,7 @@ export default class SocketHandler {
         scene.socket.on('cardPlayed', (cardName, socketId) => {
             if (socketId !== scene.socket.id) {
                 scene.GameHandler.opponentHand.shift().destroy();
-                scene.DeckHandler.dealCard((scene.dropZoneEnemy.x - 300) + (scene.dropZoneEnemy.data.values.cards * 150), scene.dropZoneEnemy.y, cardName, "opponentCard");
+                scene.DeckHandler.dealCard((scene.dropZoneEnemy.x - 400) + (scene.dropZoneEnemy.data.values.cards * 150), scene.dropZoneEnemy.y, cardName, "opponentCard");
                 scene.dropZoneEnemy.data.values.cards++;
             }
         })

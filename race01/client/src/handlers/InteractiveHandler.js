@@ -51,7 +51,7 @@ export default class InteractiveHandler {
 
         scene.input.on('drop', (pointer, gameObject, dropZonePlayer) => {
             if (scene.GameHandler.isMyTurn && scene.GameHandler.gameState === "Ready") {
-                gameObject.x = (dropZonePlayer.x - 300) + (dropZonePlayer.data.values.cards * 150);
+                gameObject.x = (dropZonePlayer.x - 400) + (dropZonePlayer.data.values.cards * 150);
                 gameObject.y = dropZonePlayer.y;
                 scene.dropZonePlayer.data.values.cards++;
                 scene.input.setDraggable(gameObject, false);
