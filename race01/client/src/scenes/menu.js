@@ -15,8 +15,8 @@ export default class Menu extends Phaser.Scene {
     create() {
         this.backgroundHandler = new backgroundHandler(this);
         this.btnPlay = this.add.sprite(
-            this.game.config.width * 0.3,
-            this.game.config.height * 0.3,
+            this.game.config.width * 0.5,
+            this.game.config.height * 0.5,
             "sprBtnPlay"
         );
 

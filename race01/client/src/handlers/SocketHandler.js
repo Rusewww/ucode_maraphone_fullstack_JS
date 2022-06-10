@@ -28,15 +28,20 @@ export default class SocketHandler {
             scene.GameHandler.changeTurn();
         })
 
+        scene.socket.on('changeTurnButton', () => {
+            scene.changeTurn.setInteractive();
+            scene.changeTurn.setColor('#00ffff');
+        })
+
 
         scene.socket.on('dealCards', (socketId, cards) => {
             if (socketId === scene.socket.id) {
                 for (let i in cards) {
-                    let card = scene.GameHandler.playerHand.push(scene.DeckHandler.dealCard(650 + (i * 155), 960, cards[i], "playerCard"));
+                    let card = scene.GameHandler.playerHand.push(scene.DeckHandler.dealCard(570 + (i * 155), 960, cards[i], "playerCard"));
                 }
             } else {
                 for (let i in cards) {
-                    let card = scene.GameHandler.opponentHand.push(scene.DeckHandler.dealCard(600 + (i * 155), 135, "cardBack", "opponentCard"));
+                    let card = scene.GameHandler.opponentHand.push(scene.DeckHandler.dealCard(570 + (i * 155), 135, "cardBack", "opponentCard"));
                 }
             }
         })

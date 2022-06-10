@@ -32,10 +32,15 @@ export default class UIHandler {
             scene.dealCards = scene.add.text(100, 445, "Deal Cards").setFontSize(14).setFontFamily('Trebuchet MS');
         }
 
+        this.buildChangeTurnButton = () => {
+            scene.changeTurn = scene.add.text(1600, 445, "Change Turn").setFontSize(14).setFontFamily('Trebuchet MS');
+        }
+
         this.buildUI = () => {
             this.buildZones();
             this.buildPlayerAreas();
             this.buildGameText();
+            this.buildChangeTurnButton();
         }
 
     }

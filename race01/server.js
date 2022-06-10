@@ -39,8 +39,12 @@ io.on('connection', function (socket) {
         io.emit('changeGameState', "Initializing");
     })
 
+    socket.on('changeTurn', function (){
+        io.emit('changeTurn');
+    })
+
     socket.on('dealCards', function (socketId) {
-        for (let i = 0; i < 5; i++) {
+        for (let i = 0; i < 6; i++) {
             if (players[socketId].inDeck.length === 0) {
                 players[socketId].inDeck = shuffle(["boolean", "ping", "battleWednesdayFrog"]);
             }
@@ -57,7 +61,8 @@ io.on('connection', function (socket) {
 
     socket.on('cardPlayed', function (cardName, socketId) {
         io.emit('cardPlayed', cardName, socketId);
-        io.emit('changeTurn');
+        io.emit('changeTurnButton');
+        //io.emit('changeTurn');
     });
 
     socket.on('disconnect', function () {

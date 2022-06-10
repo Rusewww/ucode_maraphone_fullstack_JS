@@ -3,6 +3,20 @@ export default class InteractiveHandler {
 
         scene.cardPreview = null;
 
+        scene.changeTurn.on('pointerdown', () => {
+            scene.socket.emit("changeTurn", scene.socket.id);
+            scene.changeTurn.disableInteractive();
+        })
+
+        scene.changeTurn.on('pointerover', () => {
+            scene.changeTurn.setColor('#ff69b4');
+        })
+
+        scene.changeTurn.on('pointerout', () => {
+            scene.changeTurn.setColor('#00ffff')
+        })
+
+
         scene.dealCards.on('pointerdown', () => {
             scene.socket.emit("dealCards", scene.socket.id);
             scene.dealCards.disableInteractive();
