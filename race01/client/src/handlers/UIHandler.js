@@ -1,4 +1,5 @@
 import ZoneHandler from './ZoneHandler';
+import GameHandler from "./GameHandler";
 
 export default class UIHandler {
     constructor(scene) {
@@ -36,11 +37,16 @@ export default class UIHandler {
             scene.changeTurn = scene.add.text(1600, 445, "Change Turn").setFontSize(14).setFontFamily('Trebuchet MS');
         }
 
+        this.buildCostText = () => {
+            scene.addCost = scene.add.text(1600, 600, scene.GameHandler.playerCost).setFontSize(14).setFontFamily('Trebuchet MS');
+        }
+
         this.buildUI = () => {
             this.buildZones();
             this.buildPlayerAreas();
             this.buildGameText();
             this.buildChangeTurnButton();
+            this.buildCostText();
         }
 
     }

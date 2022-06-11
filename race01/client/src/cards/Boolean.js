@@ -6,6 +6,7 @@ export default class Boolean extends Card {
         this.name = "boolean";
         this.attack = 10;
         this.deffence = 15;
+        this.cost = 1;
         this.playerCardSprite = "cyanBoolean";
         this.opponentCardSprite = "magentaBoolean";
     }

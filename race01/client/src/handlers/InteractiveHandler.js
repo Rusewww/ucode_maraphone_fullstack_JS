@@ -64,7 +64,7 @@ export default class InteractiveHandler {
         })
 
         scene.input.on('drop', (pointer, gameObject, dropZonePlayer) => {
-            if (scene.GameHandler.isMyTurn && scene.GameHandler.gameState === "Ready") {
+            if (scene.GameHandler.isMyTurn && scene.GameHandler.gameState === "Ready" && scene.dropZonePlayer.data.values.cards < 5) {
                 gameObject.x = (dropZonePlayer.x - 400) + (dropZonePlayer.data.values.cards * 150);
                 gameObject.y = dropZonePlayer.y;
                 scene.dropZonePlayer.data.values.cards++;

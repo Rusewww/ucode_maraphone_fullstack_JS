@@ -28,9 +28,17 @@ export default class SocketHandler {
             scene.GameHandler.changeTurn();
         })
 
+        scene.socket.on('addCost', () => {
+            scene.addCost.addCostPlayer();
+            scene.UIHandler.buildCostText();
+        })
+
+
         scene.socket.on('changeTurnButton', () => {
-            scene.changeTurn.setInteractive();
-            scene.changeTurn.setColor('#00ffff');
+            if (scene.GameHandler.isMyTurn === true) {
+                scene.changeTurn.setInteractive();
+                scene.changeTurn.setColor('#00ffff');
+            }
         })
 
 
