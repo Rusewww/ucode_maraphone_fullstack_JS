@@ -9,9 +9,6 @@ export default class Card {
             }
             let card = scene.add.image(x, y, sprite).setScale(0.25, 0.25).setInteractive().setData({
                 "name": this.name,
-                "health": this.health,
-                "attack": this.attack,
-                "cost": this.cost,
                 "type": type,
                 "sprite": sprite
             });

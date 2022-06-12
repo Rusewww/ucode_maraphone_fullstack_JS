@@ -1,4 +1,6 @@
 import io from 'socket.io-client';
+import Menu from "../scenes/menu";
+import Game from "../scenes/game";
 
 export default class SocketHandler {
     constructor(scene) {
@@ -26,6 +28,10 @@ export default class SocketHandler {
 
         scene.socket.on('changeTurn', () => {
             scene.GameHandler.changeTurn();
+        })
+
+        scene.socket.on('gameEnd', () => {
+            Game.scene.start("Menu");
         })
 
         scene.socket.on('addCost', () => {
