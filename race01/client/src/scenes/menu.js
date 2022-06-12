@@ -43,46 +43,46 @@ export default class Menu extends Phaser.Scene {
         //play_button
 
         this.btnPlay.on("pointerover", function() {
-            this.btnPlay.setTexture("sprBtnPlayHover"); // установка текстуры для кнопки
+            this.btnPlay.setTexture("sprBtnPlayHover").setScale(1.1); // установка текстуры для кнопки
         }, this);
 
         this.btnPlay.on("pointerout", function() {
-            this.setTexture("sprBtnPlay");
+            this.setTexture("sprBtnPlay").setScale(1);
         });
 
         this.btnPlay.on("pointerup", function() {
-            this.btnPlay.setTexture("sprBtnPlay");
+            this.btnPlay.setTexture("sprBtnPlay").setScale(1);
             this.scene.start("Game");
         }, this);
 
         //deck_button
 
         this.btnDeck.on("pointerover", function() {
-            this.btnDeck.setTexture("sprBtnDeckHover"); // установка текстуры для кнопки
+            this.btnDeck.setTexture("sprBtnDeckHover").setScale(1.1); // установка текстуры для кнопки
         }, this);
 
         this.btnDeck.on("pointerout", function() {
-            this.setTexture("sprBtnDeck");
+            this.setTexture("sprBtnDeck").setScale(1);
         });
 
         this.btnDeck.on("pointerup", function() {
-            this.btnDeck.setTexture("sprBtnDeck");
-            this.scene.start("Game");
+            this.btnDeck.setTexture("sprBtnDeck").setScale(1);
+            this.scene.start("Deck");
         }, this);
 
         //exit_button
 
         this.btnExit.on("pointerover", function() {
-            this.btnExit.setTexture("sprBtnExitHover"); // установка текстуры для кнопки
+            this.btnExit.setTexture("sprBtnExitHover").setScale(1.1); // установка текстуры для кнопки
         }, this);
 
         this.btnExit.on("pointerout", function() {
-            this.setTexture("sprBtnExit");
+            this.setTexture("sprBtnExit").setScale(1);
         });
 
         this.btnExit.on("pointerup", function() {
-            this.btnExit.setTexture("sprBtnExit");
-            this.scene.start("Game");
+            this.btnExit.setTexture("sprBtnExit").setScale(1);
+            window.close();
         }, this);
 
         //this.scene.start("Game");

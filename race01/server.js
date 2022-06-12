@@ -33,7 +33,7 @@ io.on('connection', function (socket) {
     }
 
     socket.on('dealDeck', function (socketId) {
-        players[socketId].inDeck = shuffle(["boolean", "ping", "battleWednesdayFrog"]);
+        players[socketId].inDeck = shuffle(["pixelFrog", "ukrainianFrog", "battleWednesdayFrog", "aristocratFrog", "classicFrog", "workFrog", "jabaka", "japanFrog", "kingFrog", "jodaFrog", "samuraiFrog", "underwaterFrog"]);
         console.log(players);
         if (Object.keys(players).length < 2) return;
         io.emit('changeGameState', "Initializing");
@@ -46,7 +46,7 @@ io.on('connection', function (socket) {
     socket.on('dealCards', function (socketId) {
         for (let i = 0; i < 6; i++) {
             if (players[socketId].inDeck.length === 0) {
-                players[socketId].inDeck = shuffle(["boolean", "ping", "battleWednesdayFrog"]);
+                players[socketId].inDeck = shuffle(["pixelFrog", "ukrainianFrog", "battleWednesdayFrog", "aristocratFrog", "classicFrog", "workFrog", "jabaka", "japanFrog", "kingFrog", "jodaFrog", "samuraiFrog", "underwaterFrog"]);
             }
             players[socketId].inHand.push(players[socketId].inDeck.shift());
         }

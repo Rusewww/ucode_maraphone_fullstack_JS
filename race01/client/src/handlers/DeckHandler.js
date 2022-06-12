@@ -1,16 +1,34 @@
 import CardBack from '../cards/CardBack';
-import Boolean from '../cards/Boolean';
-import Ping from '../cards/Ping';
-import BattleWednesdayFrog from "../cards/battleWednesdayFrog";
+import PixelFrog from '../cards/PixelFrog';
+import UkrainianFrog from '../cards/UkrainianFrog';
+import BattleWednesdayFrog from "../cards/BattleWednesdayFrog";
+import AristocratFrog from "../cards/AristocratFrog";
+import ClassicFrog from "../cards/ClassicFrog";
+import WorkFrog from "../cards/WorkFrog";
+import Jabaka from "../cards/Jabaka";
+import JapanFrog from "../cards/JapanFrog";
+import KingFrog from "../cards/KingFrog";
+import JodaFrog from "../cards/JodaFrog";
+import SamuraiFrog from "../cards/SamuraiFrog";
+import UnderwaterFrog from "../cards/UnderwaterFrog";
 
 export default class DeckHandler {
     constructor(scene) {
         this.dealCard = (x, y, name, type) => {
             let cards = {
                 cardBack: new CardBack(scene),
-                boolean: new Boolean(scene),
-                ping: new Ping(scene),
-                battleWednesdayFrog: new BattleWednesdayFrog(scene)
+                pixelFrog: new PixelFrog(scene),
+                ukrainianFrog: new UkrainianFrog(scene),
+                battleWednesdayFrog: new BattleWednesdayFrog(scene),
+                aristocratFrog: new AristocratFrog(scene),
+                classicFrog: new ClassicFrog(scene),
+                workFrog: new WorkFrog(scene),
+                jabaka: new Jabaka(scene),
+                japanFrog: new JapanFrog(scene),
+                kingFrog: new KingFrog(scene),
+                jodaFrog: new JodaFrog(scene),
+                samuraiFrog: new SamuraiFrog(scene),
+                underwaterFrog: new UnderwaterFrog(scene)
             }
             let newCard = cards[name];
             return(newCard.render(x, y, type));

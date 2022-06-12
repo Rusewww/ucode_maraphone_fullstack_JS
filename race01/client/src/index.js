@@ -1,6 +1,7 @@
 import Phaser from "phaser";
 import Menu from "./scenes/menu.js";
 import Game from "./scenes/game.js";
+import Deck from "./scenes/deck";
 
 let config = {
     type: Phaser.AUTO,
@@ -11,7 +12,8 @@ let config = {
     },
     scene: [
         Menu,
-        Game
+        Game,
+        Deck
     ]
 };
 
