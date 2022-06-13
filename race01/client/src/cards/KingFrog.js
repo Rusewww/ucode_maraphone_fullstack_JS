@@ -4,10 +4,10 @@ export default class KingFrog extends Card {
     constructor(scene) {
         super(scene);
         this.name = "kingFrog";
-        this.attack = 10;
-        this.health = 15;
-        this.cost = 1;
+        this.attack = 3;
+        this.health = 4;
+        this.cost = 3;
         this.playerCardSprite = "kingFrog";
-        this.opponentCardSprite = "kingFrog";
+        this.opponentCardSprite = "kingFrogEnemy";
     }
 }

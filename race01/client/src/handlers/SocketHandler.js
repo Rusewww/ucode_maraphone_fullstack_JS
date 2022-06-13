@@ -28,6 +28,7 @@ export default class SocketHandler {
 
         scene.socket.on('changeTurn', () => {
             scene.GameHandler.changeTurn();
+            scene.GameHandler.attack();
         })
 
         scene.socket.on('gameEnd', () => {
@@ -36,7 +37,7 @@ export default class SocketHandler {
 
         scene.socket.on('addCost', () => {
             scene.addCost.addCostPlayer();
-            scene.UIHandler.buildCostText();
+            //scene.UIHandler.buildCostText();
         })
 
 
@@ -51,11 +52,11 @@ export default class SocketHandler {
         scene.socket.on('dealCards', (socketId, cards) => {
             if (socketId === scene.socket.id) {
                 for (let i in cards) {
-                    let card = scene.GameHandler.playerHand.push(scene.DeckHandler.dealCard(570 + (i * 155), 960, cards[i], "playerCard"));
+                    let card = scene.GameHandler.playerHand.push(scene.DeckHandler.dealCard(500 + (i * 155), 960, cards[i], "playerCard"));
                 }
             } else {
                 for (let i in cards) {
-                    let card = scene.GameHandler.opponentHand.push(scene.DeckHandler.dealCard(570 + (i * 155), 135, "cardBack", "opponentCard"));
+                    let card = scene.GameHandler.opponentHand.push(scene.DeckHandler.dealCard(500 + (i * 155), 135, "cardBack", "opponentCard"));
                 }
             }
         })

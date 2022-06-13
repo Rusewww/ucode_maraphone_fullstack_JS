@@ -11,8 +11,7 @@ BackGround.prototype.init = function (scene) {
 }
 
 BackGround.prototype.setPic = function (scene) {
-    let background = scene.add.image(960, 540, 'background');
-    return background;
+    return scene.add.image(960, 540, 'background');
 }
 
 module.exports = BackGround;

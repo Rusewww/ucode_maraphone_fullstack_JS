@@ -44,7 +44,7 @@ io.on('connection', function (socket) {
     })
 
     socket.on('dealCards', function (socketId) {
-        for (let i = 0; i < 6; i++) {
+        for (let i = 0; i < 7; i++) {
             if (players[socketId].inDeck.length === 0) {
                 players[socketId].inDeck = shuffle(["pixelFrog", "ukrainianFrog", "battleWednesdayFrog", "aristocratFrog", "classicFrog", "workFrog", "jabaka", "japanFrog", "kingFrog", "jodaFrog", "samuraiFrog", "underwaterFrog"]);
             }

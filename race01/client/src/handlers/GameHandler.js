@@ -12,6 +12,11 @@ export default class GameHandler {
         this.opponentHand = [];
         this.playerZone = [];
         this.opponentZone = [];
+
+        this.attack = () => {
+            //this.opponentZone.cards[1].health -= this.playerZone.cards[1].attack;
+            console.log("PlayerDeck: " + this.playerDeck);
+        }
         
         this.changeTurn = () => {
             this.isMyTurn = !this.isMyTurn;

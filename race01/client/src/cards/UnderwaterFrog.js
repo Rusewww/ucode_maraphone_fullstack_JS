@@ -4,10 +4,10 @@ export default class UnderwaterFrog extends Card {
     constructor(scene) {
         super(scene);
         this.name = "underwaterFrog";
-        this.attack = 10;
-        this.health = 15;
+        this.attack = 1;
+        this.health = 5;
         this.cost = 1;
         this.playerCardSprite = "underwaterFrog";
-        this.opponentCardSprite = "underwaterFrog";
+        this.opponentCardSprite = "underwaterFrogEnemy";
     }
 }
