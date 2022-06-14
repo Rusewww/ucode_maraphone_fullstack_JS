@@ -1,4 +1,28 @@
 # Wednesday my dudes
+
+## Game screenshots
+### Game menu
+![Menu](./images/menu.png)
+
+### Game deck
+![Menu](./images/deck.png)
+
+### Game
+![Menu](./images/game.jpg)
+
+## How to start
+
+| Command            | Description                  |
+|--------------------|------------------------------|
+| `npm install`      | Install npm packages server. |
+| `npm start`        | Start server.                |
+| `cd client`        | Change directory to client.  |
+| `cd install`       | Install npm packages client. |
+| `npm run start`    | Start first client.          |
+| `open new console` | Open new console window.     |
+| `cd client`        | Change directory to client.  |
+| `npm run start`    | Start second client.         |
+
 ## Requirements
 
 [Node.js](https://nodejs.org) is required to install dependencies and run scripts via `npm`.
