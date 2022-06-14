@@ -9,11 +9,11 @@ export default class InteractiveHandler {
         })
 
         scene.changeTurn.on('pointerover', () => {
-            scene.changeTurn.setColor('#ff69b4');
+            scene.changeTurn.setColor('#b433ff');
         })
 
         scene.changeTurn.on('pointerout', () => {
-            scene.changeTurn.setColor('#00ffff')
+            scene.changeTurn.setColor('#5b008f');
         })
 
 
@@ -23,11 +23,11 @@ export default class InteractiveHandler {
         })
 
         scene.dealCards.on('pointerover', () => {
-            scene.dealCards.setColor('#ff69b4');
+            scene.dealCards.setColor('#20d005');
         })
 
         scene.dealCards.on('pointerout', () => {
-            scene.dealCards.setColor('#00ffff')
+            scene.dealCards.setColor('#085602')
         })
 
 

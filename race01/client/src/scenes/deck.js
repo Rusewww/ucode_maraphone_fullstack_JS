@@ -1,4 +1,4 @@
-import backgroundHandler from '../handlers/backgroundHandler';
+import backgroundHandler from '../handlers/backgroundHandler_menu';
 
 export default class Deck extends Phaser.Scene {
     constructor() {

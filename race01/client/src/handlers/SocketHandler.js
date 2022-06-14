@@ -22,7 +22,7 @@ export default class SocketHandler {
                 scene.DeckHandler.dealCard(1700, 960, "cardBack", "playerCard");
                 scene.DeckHandler.dealCard(1700, 135, "cardBack", "opponentCard");
                 scene.dealCards.setInteractive();
-                scene.dealCards.setColor('#00ffff');
+                scene.dealCards.setColor('#085602');
             }
         });
 
@@ -44,7 +44,7 @@ export default class SocketHandler {
         scene.socket.on('changeTurnButton', () => {
             if (scene.GameHandler.isMyTurn === true) {
                 scene.changeTurn.setInteractive();
-                scene.changeTurn.setColor('#00ffff');
+                scene.changeTurn.setColor('#5b008f');
             }
         })
 

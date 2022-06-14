@@ -4,7 +4,7 @@ import GameHandler from '../handlers/GameHandler';
 import InteractiveHandler from '../handlers/InteractiveHandler';
 import SocketHandler from '../handlers/SocketHandler';
 import UIHandler from '../handlers/UIHandler';
-import BackgroundHandler from '../handlers/backgroundHandler';
+import BackgroundHandler from '../handlers/backgroundHandler_game';
 //import PlayerHead from '../handlers/PlayerHead';
 
 export default class Game extends Phaser.Scene {
@@ -13,8 +13,8 @@ export default class Game extends Phaser.Scene {
     }
 
     preload() {
-        this.load.image('cyanCardBack', 'src/assets/CyanCardBack.png');
-        this.load.image('magentaCardBack', 'src/assets/MagentaCardBack.png');
+        this.load.image('cyanCardBack', 'src/assets/PlayerCardBack.png');
+        this.load.image('magentaCardBack', 'src/assets/EnemyCardBack.png');
 
         this.load.image('battleWednesdayFrog', 'src/assets/battle_Wednesday_Frog.png');
         this.load.image('battleWednesdayFrogEnemy', 'src/assets/battle_Wednesday_Frog_enemy.png');
@@ -24,7 +24,6 @@ export default class Game extends Phaser.Scene {
         this.load.image('ukrainianFrogEnemy', 'src/assets/Ukrainian_frog_enemy.png');
         this.load.image('aristocratFrog', 'src/assets/Aristocrat_frog.png');
         this.load.image('aristocratFrogEnemy', 'src/assets/Aristocrat_frog_enemy.png');
-
         this.load.image('classicFrog', 'src/assets/Classic_frog.png');
         this.load.image('classicFrogEnemy', 'src/assets/Classic_frog_enemy.png');
         this.load.image('workFrog', 'src/assets/Frog_on_work.png');
@@ -42,8 +41,7 @@ export default class Game extends Phaser.Scene {
         this.load.image('underwaterFrog', 'src/assets/Underwater_frog.png');
         this.load.image('underwaterFrogEnemy', 'src/assets/Underwater_frog_enemy.png');
 
-        this.load.image('background','src/assets/back_menu.jpg');
-        
+        this.load.image('background_game','src/assets/game_background.png');
     }
 
     create() {

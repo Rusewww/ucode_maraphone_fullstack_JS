@@ -1,4 +1,4 @@
-import backgroundHandler from '../handlers/backgroundHandler';
+import backgroundHandler from '../handlers/backgroundHandler_menu';
 
 export default class Menu extends Phaser.Scene {
     constructor() {
@@ -18,6 +18,9 @@ export default class Menu extends Phaser.Scene {
 
     create() {
         this.backgroundHandler = new backgroundHandler(this);
+
+        this.add.text(this.game.config.width * 0.3, this.game.config.height * 0.2, "Wednesday my dudes").setFontSize(80).setFontFamily('Trebuchet MS');
+
         this.btnPlay = this.add.sprite(
             this.game.config.width * 0.5,
             this.game.config.height * 0.4,
